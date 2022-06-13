@@ -52,11 +52,12 @@ div.skills  img {
 	height: 60px;
 }
 div.gallery {
+	font-size: 60%%;
 	margin: 3px;
 	border: 1px solid #ccc;
 	float: left;
 	width: 180px;
-	height: 300px;
+	height: 370px;
 }
 
 div.gallery:hover {
