@@ -1,0 +1,68 @@
+.Side-Image {
+    float:right;width:260px;height:260px;
+}
+body{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    /*background-color: khaki;*/
+    background-size: cover;
+    text-align: left;
+    color: black;
+    font-weight: bold;
+}
+#SynopsisText{
+    padding-left: 60px;
+}
+.Synopsis{ 
+    padding-left: 240px;
+}
+h1 {
+    color:goldenrod;
+}
+button{
+    color: #016f32;
+    width:150px;
+    background:goldenrod;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-left: 20px;
+    padding-bottom:5px;
+    font-weight: bold;
+    border:none;
+    border-radius: 2px;
+    margin-bottom: 4px;
+    float:left
+}
+.Tab{position: relative;
+    top:10px;
+    left :240px;
+}
+Table{
+    border:1 ;
+    border-style: double;
+    border-radius: 5px;
+    border :solid;
+    
+}
+th{
+    text-align: center  ;
+    border: 1px solid black;
+}
+tr{
+    text-align: center;
+}
+td{
+    text-align: center;
+    border: 1px solid black;
+}
+#View-project{
+    float:left
+}
+#message-el{
+    font-style: italic;
+}
+
+
+.labels0{
+    padding :20px;
+    text-align: right;
+}
