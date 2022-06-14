@@ -5,7 +5,100 @@
 	Prologue by HTML5 UP
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
+.zoom{
+	transition: transform .2s;
+}
+.zoom:hover {
+	transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  }
 
+
+div[name="Skills"]{padding: 2%;
+	display: grid;
+	padding-bottom: 2%;
+	
+	justify-content: left;}
+
+.grid {
+	padding: 2%;
+	display: grid;
+	padding-bottom: 2%;
+	
+	justify-content: center;
+  }
+  .A {
+	grid-column: 1;
+	grid-row: 1;
+  }
+  .B {
+	grid-column: 2;
+	grid-row: 1;
+  }
+  .C {
+	grid-column: 3;
+	grid-row: 1;
+  }
+  .D {
+	grid-column: 4;
+	grid-row: 1;
+  }
+  .E{
+	grid-column: 5;
+	grid-row: 1;
+  }
+  .F {
+	grid-column: 1;
+	grid-row: 2;
+  }
+  .G {
+	grid-column: 2;
+	grid-row: 2;
+  }
+  .H {
+	grid-column: 3;
+	grid-row: 2;
+  }
+  .I {
+	grid-column: 4;
+	grid-row: 2;
+  }
+  .J{
+	grid-column: 5;
+	grid-row: 2;
+  }
+	
+
+.Plan {
+	padding: 2%;
+	display: grid;
+	padding-bottom: 2%;
+	
+	justify-content: center;
+  }
+  .one {
+	grid-column: 1;
+	grid-row: 1;
+  }
+  .two {
+	grid-column: 2;
+	grid-row: 1;
+  }
+  .three {
+	grid-column: 1;
+	grid-row: 2;
+  }
+  .four {
+	grid-column: 2;
+	grid-row: 2;
+  }
+
+div[name="Content"]{
+	margin: 0 auto;
+	max-width: 960px;
+	padding: 1.5em;
+	font-size: 90%;
+	text-align: left;
+}
 div[name="LastU"]{
 	padding: 2px;
 	margin: auto;
@@ -13,44 +106,49 @@ div[name="LastU"]{
 	width: 	auto;
 	text-align: left;
 }
-div.Tools {
-	padding: 2px;
-	margin: auto;
-	float: left;
-	width: 	auto;
-}
-
-
-div.Tools  img {
-	width: auto;
-	height: 100px;
-}
-
-div.Languages {
-	padding: 10px;
-	margin: auto;
-	float: left;
-	width: 	auto;
-}
-
-
-div.Languages  img {
-	width: auto;
-	height: 100px;
-}
-
 
 div.skills {
-	margin: 11px;
-	float: left;
-	width: 	95px;
+	display:block;
+	font-size: 80%;
+	float: center;
+	width: 	80%;
 }
 
 
 div.skills  img {
-	width: auto;
-	height: 60px;
+	
+	width: 80%;
+	height: auto;
+	float: center;
 }
+div.Languages {
+	font-size: 80%;
+	padding: 10px;
+	margin: auto;
+	float: center;
+	width: 	80%;
+}
+
+
+div.Languages  img {
+	display:block;
+	width: 80%;
+	height: auto;
+}
+div.Tools {
+	font-size: 80%;
+	margin: auto;
+	float: center;
+	width: 	80%;
+	
+}
+
+div.Tools  img {
+	display: grid;
+	display:block;
+	width: 80%;
+}
+
 div.gallery {
 	font-size: 80%;
 	font-weight: bold;
@@ -136,6 +234,16 @@ em[name="LSH2"]
 	font-size: 60%;
 	font: inherit;
 	color: #0066FF;
+}
+
+em[name="LSH3"]
+{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 60%;
+	font: inherit;
+	color: #17181a;
 }
 
 
@@ -2393,6 +2501,7 @@ input, select, textarea {
 
 			#main > section.four {
 				background-color: #e8edec;
+				text-align: left;
 			}
 
 /* Wide */
