@@ -17,7 +17,7 @@ div[name="Skills"]{padding: 2%;
 	display: grid;
 	padding-bottom: 2%;
 	
-	justify-content: center;}
+	justify-content: left;}
 
 .grid {
 	padding: 2%;
@@ -122,6 +122,8 @@ div.skills  img {
 	float: center;
 }
 div.Languages {
+
+	display: block;
 	font-size: 80%;
 	padding: 10px;
 	margin: auto;
@@ -135,7 +137,8 @@ div.Languages  img {
 	width: 80%;
 	height: auto;
 }
-div.Tools {
+div.Tools {	
+	text-align: left;
 	font-size: 80%;
 	margin: auto;
 	float: center;
@@ -144,7 +147,8 @@ div.Tools {
 }
 
 div.Tools  img {
-	display: grid;
+	display: block	;
+	float: center;
 	display:block;
 	width: 80%;
 }
@@ -246,6 +250,13 @@ em[name="LSH3"]
 	color: #17181a;
 }
 
+div[name="vid"]
+{	font-size: 80%;
+	margin: auto;
+	float: center;
+	width: 	80%;
+	text-align: center;
+	}
 
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
