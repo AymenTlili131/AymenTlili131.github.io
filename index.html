@@ -8,22 +8,7 @@
 				<link rel="SHORTCUT ICON" href="/images/Robot.ico" type="image/x-icon" />
 				<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
 				<meta name="description" content="Aymen Tlili's portfolio"/>
-				<script src="https://documentcloud.adobe.com/view-sdk/main.js" async></script>
-				<script type="text/javascript">
-				   document.addEventListener("adobe_dc_view_sdk.ready", function()
-				   {
-					   var adobeDCView = new AdobeDC.View({clientId: "<Y2f545b090d1b441eb5d8326440ce0b01>", divId: "adobe-dc-view"});
-					   adobeDCView.previewFile(
-					  {
-						 content:   {location: {url: "https://acrobat.adobe.com/link/review?uri=urn:aaid:scds:US:51e44b47-33f6-431f-a1c6-f948866ed885"}},
-						 metaData: {fileName: "Relevé notes 1ére.pdf"}
-					  });
-					  adobeDCView.previewFile(
-					  {
-						 content:   {location: {url: "https://acrobat.adobe.com/link/review?uri=urn:aaid:scds:US:bc14fc08-719f-40a9-b500-3098459056cc"}},
-						 metaData: {fileName: "Notes 2éme.pdf"}
-					  });
-				   });
+				<script src="/build/pdf.js">
 				</script>
 		</head>
 		<body class="is-preload">
@@ -308,19 +293,37 @@
 														<h2>Academia	</h2>
 												</header>
 												<a href="https://drive.google.com/drive/folders/11ehQoyISzJjev183CPjLh9xhz-unvhZ7?usp=sharing" title="My Grades">Redirect to Google Drive Folder</a>
-												<p>&nbsp;&nbsp;&nbsp;&nbsp;By following the attached Link above you may Find the Data engineering Roadmap set by Enet'com(Sfax-Tunisia) (<em name="LSH3">E</em>cole <em name="LSH3">n</em>ationale d'<em name="LSH3">é</em>lectroniques et <em name="LSH3">T</em>élé<em name="LSH3">com</em>munications) and how it has evolved as a new branch after several adjustments.<br>
+												<p>&nbsp;&nbsp;&nbsp;&nbsp;By following the attached Link above you may Find the Data engineering Roadmap set by Enet'com(Sfax-Tunisia) (National school for electronics and telecommunication or <em name="LSH3">E</em>cole <em name="LSH3">n</em>ationale d'<em name="LSH3">é</em>lectroniques et <em name="LSH3">T</em>élé<em name="LSH3">com</em>munications) and how it has evolved as a new branch after several adjustments.<br>
 													In case you have problems using G Drive, here's a preview(posting the original documents which are in french):<br>
-													<div class="Plan">
+													<!--<div class="Plan">
 														<div class="one zoom"><img  src="images/image2vector (1).svg" alt="S1" width="600" height="500" title="Term 1"></div>
 															<div class="two zoom"><img  src="images/image2vector (2).svg" alt="S2" width="600" height="500" title="Term 2"> </div>
 															<div class="three zoom"><img  src="images/image2vector (3).svg" alt="S3" width="600" height="500" title="Term 3"></div>
 															<div class="four zoom"><img  src="images/image2vector (4).svg" alt="S4" width="600" height="500" title="Term 4"></div>
-													</div>
+													</div> -->
 													&nbsp;&nbsp;&nbsp;You will also find files corresponding to my grades/grade average during each academic Term.<br>
-													&nbsp;I graduated from Gafsa's Pioneering High School then opted for the Institute for Pre-Engineering Studies of Monastir (IPEIM,  Monastir-Tunisia ) where we covered Functional and Real Analysis as well as Physics,Linear algebra & probability/topological intros.<br>
+													&nbsp;I graduated from Gafsa's Pioneering High School then opted for the Institute for Pre-Engineering Studies of Monastir (IPEIM,  Monastir-Tunisia ) where we covered Functional and Real Analysis as well as Physics,Linear algebra & probability/topological intros and picked up python .<br>
 													&nbsp;for more  info about Enet'com visit <a href="https://enetcom.rnu.tn/fra/pages/325/Ing%C3%A9nierie-des-Donn%C3%A9es-et-Syst%C3%A8mes-D%C3%A9cisionnels" >their site</a> </p>
+													<!--<iframe id="inlineFrameExample"
+													title="Inline Frame Example"
+													width="400"
+													height="200"
+													src="pdf viewer.html">-->
+													
+													<canvas id="pdf"></canvas>
+															<!--<object data="images/Relevé notes 1ére.pdf" type="application/pdf">
+																	<embed src="images/Relevé notes 1ére.pdf" type="application/pdf" />
+														
+															</object>-->
+															
+															<iframe
+														src="/web/viewer.html?file=/images/notesi.pdf"
+														width="800px"
+														height="600px"
+														/>
+
+													
 										</div>
- <div id="adobe-dc-view"> PS: all grades are out of 20.</div>
 
 								</section>
 
