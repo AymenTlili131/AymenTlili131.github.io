@@ -1,4 +1,5 @@
-var loadingTask = PDFJS.getDocument('/notesi.pdf');
+//var loadingTask = PDFJS.getDocument('/notesi.pdf');
+var loadingTask = PDFJS.getDocument('/assets/notesi.pdf');
 loadingTask.promise.then(
 	function (pdf) {
 		// Load information from the first page.
