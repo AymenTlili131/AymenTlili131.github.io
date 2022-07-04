@@ -1,5 +1,6 @@
 //var loadingTask = PDFJS.getDocument('/notesi.pdf');
-var loadingTask = PDFJS.getDocument('https://github.com/AymenTlili131/AymenTlili131.github.io/blob/master/assets/notesi.pdf');
+var loadingTask = pdfjsLib.getDocument('/assets/notesi.pdf')
+//.getDocument('https://github.com/AymenTlili131/AymenTlili131.github.io/blob/master/assets/notesi.pdf');
 loadingTask.promise.then(
 	function (pdf) {
 		// Load information from the first page.
