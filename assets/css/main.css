@@ -8,6 +8,7 @@
 div.pdf
 {
 
+	height: 720px;
 }
 .zoom{
 	transition: transform .2s;
