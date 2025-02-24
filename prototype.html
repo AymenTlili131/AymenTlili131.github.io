@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aymen Tlili - Portfolio</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Ensure you have a styles.css file -->
+
+    <style>
+        /* Tab styles */
+        .tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .tab {
+            padding: 10px 20px;
+            cursor: pointer;
+            background: #ddd;
+            border-radius: 5px;
+            margin: 0 5px;
+            font-weight: bold;
+        }
+        .tab.active {
+            background: #0073e6;
+            color: white;
+        }
+
+        /* Projects container */
+        .projects-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 30%;
+            min-width: 250px;
+            text-align: center;
+        }
+
+        .project-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 5px;
+            margin-bottom: 10px;
+        }
+
+        .tag {
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 12px;
+            font-weight: bold;
+            color: white;
+        }
+
+        /* Responsive */
+        @media (max-width: 800px) {
+            .project-card {
+                width: 80%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Aymen Tlili - Portfolio</h1>
+
+    <!-- Tabs for Project Categories -->
+    <div class="tabs">
+        <div class="tab active" onclick="filterProjects('AI Researcher')">A.I Researcher</div>
+        <div class="tab" onclick="filterProjects('Deep Learning Engineer')">Deep Learning Engineer</div>
+        <div class="tab" onclick="filterProjects('Data Engineer & BI')">Data Engineer & BI</div>
+    </div>
+
+    <!-- Projects Display -->
+    <div class="projects-container" id="projects-container">
+        <!-- Projects will be loaded dynamically here -->
+    </div>
+
+    <script>
+        // Assign random colors to tags
+        function getRandomColor(tag) {
+            const colors = {
+                "Time-series": "#FFCC80",
+                "Computer vision": "#90CAF9",
+                "NLP": "#A5D6A7",
+                "Reinforcement Learning": "#E57373",
+                "Dashboard": "#F48FB1",
+                "Web Scraping": "#CE93D8",
+                "Survival modeling": "#B0BEC5",
+                "PowerBI": "#FFD54F",
+                "Data warehouse": "#AED581",
+                "3D modeling": "#BA68C8",
+                "Graphs": "#64B5F6",
+                "Custom dataset": "#FF7043",
+                "Deep learning": "#4DB6AC"
+            };
+            return colors[tag] || "#BDBDBD"; // Default gray
+        }
+
+        // Full project list
+        const projects = [
+            {
+                name: "Continual Federated Learning",
+                tags: ["Custom dataset", "Pytorch", "A2C", "Research"],
+                categories: ["AI Researcher", "Deep Learning Engineer"]
+            },
+            {
+                name: "Pathfinding with PPO in Unity",
+                tags: ["Unity", "PPO", "ml-agents", "Reinforcement Learning"],
+                categories: ["Deep Learning Engineer", "AI Researcher"]
+            },
+            {
+                name: "Chess Engine",
+                tags: ["Negamax", "Bit Operations", "Reinforcement Learning"],
+                categories: ["AI Researcher"]
+            },
+            {
+                name: "Pharmaceutical Products Forecast",
+                tags: ["Time-series", "R", "Tensorflow"],
+                categories: ["Deep Learning Engineer", "Data Engineer & BI"]
+            },
+            {
+                name: "Currency Exchange Rate Forecast",
+                tags: ["Time-series", "SARIMAX"],
+                categories: ["Data Engineer & BI"]
+            },
+            {
+                name: "CNN for Depth Estimation",
+                tags: ["Computer vision", "Pytorch", "NYU dataset"],
+                categories: ["Deep Learning Engineer"]
+            },
+            {
+                name: "Bacillus Motion Prediction",
+                tags: ["Microscopic Images", "Pytorch", "Java"],
+                categories: ["AI Researcher"]
+            },
+            {
+                name: "NCS Music Recommendation",
+                tags: ["Audio data", "NLP", "Librosa"],
+                categories: ["Deep Learning Engineer"]
+            },
+            {
+                name: "Predicting Client Churn",
+                tags: ["Survival modeling", "Scikit-survival"],
+                categories: ["Deep Learning Engineer"]
+            },
+            {
+                name: "Simulated Company Dashboard",
+                tags: ["PowerBI", "Data warehouse"],
+                categories: ["Data Engineer & BI"]
+            },
+            {
+                name: "Web Scraping: Wikipedia & Reddit",
+                tags: ["Web Scraping", "BeautifulSoup", "Python"],
+                categories: ["Data Engineer & BI"]
+            },
+            {
+                name: "3D Object Reconstruction",
+                tags: ["3D modeling", "Computer vision", "Pytorch"],
+                categories: ["Deep Learning Engineer", "AI Researcher"]
+            },
+            {
+                name: "Social Network Analysis",
+                tags: ["Graphs", "NetworkX", "Python"],
+                categories: ["AI Researcher", "Data Engineer & BI"]
+            },
+            {
+                name: "Sentiment Analysis on Tweets",
+                tags: ["NLP", "Text Mining", "Python"],
+                categories: ["Deep Learning Engineer"]
+            },
+            {
+                name: "Stock Market Prediction",
+                tags: ["Time-series", "LSTM", "Tensorflow"],
+                categories: ["Deep Learning Engineer", "Data Engineer & BI"]
+            }
+        ];
+
+        // Function to filter projects by category
+        function filterProjects(category) {
+            document.querySelectorAll('.tab').forEach(tab => {
+                tab.classList.remove('active');
+                if (tab.innerText === category) tab.classList.add('active');
+            });
+
+            const container = document.getElementById("projects-container");
+            container.innerHTML = "";
+
+            projects.filter(proj => proj.categories.includes(category)).forEach(proj => {
+                const projectCard = document.createElement("div");
+                projectCard.classList.add("project-card");
+
+                projectCard.innerHTML = `
+                    <div class="project-title">${proj.name}</div>
+                    <div class="tags">
+                        ${proj.tags.map(tag => `<span class="tag" style="background:${getRandomColor(tag)};">${tag}</span>`).join('')}
+                    </div>
+                `;
+                container.appendChild(projectCard);
+            });
+        }
+
+        // Load the default tab
+        filterProjects("AI Researcher");
+    </script>
+
+</body>
+</html>
